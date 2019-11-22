@@ -20,8 +20,8 @@
         immediate: yes
     - name: check status
       uri: 
-        url: http://winX.example.com
+        url: 192.168.52.140
       register: result
-      delegate_to: 192.168.52.140
+      delegate_to: localhost
     - debug:
         msg: "HTTP Status code :: {{ result.status }}"
